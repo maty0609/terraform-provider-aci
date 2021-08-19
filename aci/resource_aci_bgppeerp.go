@@ -252,6 +252,7 @@ func setBgpPeerConnectivityProfileAttributes(bgpPeerP *models.BgpPeerConnectivit
 	if err != nil {
 		return d, err
 	}
+	d.Set("parent_dn", GetParentDn(dn, fmt.Sprintf("/peerP-[%s]", bgpPeerPMap["addr"])))
 
 	d.Set("admin_state", bgpPeerPMap["adminSt"])
 	d.Set("addr", bgpPeerPMap["addr"])
