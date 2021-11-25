@@ -173,7 +173,7 @@ func resourceAciBgpPeerConnectivityProfile() *schema.Resource {
 
 			"relation_bgp_rs_peer_pfx_pol": &schema.Schema{
 				Type:     schema.TypeString,
-				Computed: true,
+				Default:  "uni/tn-common/bgpPfxP-default",
 				Optional: true,
 			},
 			"relation_bgp_rs_peer_to_profile": &schema.Schema{

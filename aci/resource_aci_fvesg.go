@@ -116,8 +116,8 @@ func resourceAciEndpointSecurityGroup() *schema.Resource {
 				},
 			},
 			"relation_fv_rs_cust_qos_pol": {
-				Type: schema.TypeString,
-
+				Type:        schema.TypeString,
+				Default:     "uni/tn-common/qoscustom-default",
 				Optional:    true,
 				Description: "Create relation to qos:CustomPol",
 			},
@@ -170,8 +170,8 @@ func resourceAciEndpointSecurityGroup() *schema.Resource {
 				},
 			},
 			"relation_fv_rs_scope": {
-				Type: schema.TypeString,
-
+				Type:        schema.TypeString,
+				Default:     "uni/tn-common/qoscustom-default",
 				Optional:    true,
 				Description: "Create relation to fv:Ctx",
 			},
